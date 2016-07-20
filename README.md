@@ -1,10 +1,11 @@
 # arc-graph
 
-Built on top of [d3.js]('https://d3js.org/')
+
+Built on top of [d3.js](https://d3js.org/).
 
 
 ## Installing
-1. Include d3.js library
+1. Include [d3.js](https://d3js.org/) library
 2. Include arc-chart.js library
 
 ### Prerequisities
@@ -33,9 +34,10 @@ This will plot you a shiny graph with default values. See the full options below
 ## Data Format
 
 The data should be an array of objects having the three properties:
-1. label: label to be displayed in legends
-2. value: value of the label 
-3. fill: color of the ring/arc that you would like to have for this object/datum
+
+1. **label**: label to be displayed in legends
+2. **value**: value of the label 
+3. **fill**: color of the ring/arc that you would like to have for this object/datum
 
 Here is how a sample data would look like:
 ```
@@ -66,14 +68,11 @@ The graph drawn will span over the width of the container. If you want the graph
 
 ## Built With
 
-* D3.js 
-* Atom
+* [d3.js](https://d3js.org/) 
+* [Atom] (http://atom.io/)
 
 ## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-
+Just send a pull request :P
 
 ## Authors
 
