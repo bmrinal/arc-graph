@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Arc-graph by bmrinal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Arc-graph</h1>
+      <h2 class="project-tagline">A light weight library for generating arc ring graphs</h2>
+      <a href="https://github.com/bmrinal/arc-graph" class="btn">View on GitHub</a>
+      <a href="https://github.com/bmrinal/arc-graph/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/bmrinal/arc-graph/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="arc-graph" class="anchor" href="#arc-graph" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>arc-graph</h1>
+
+<p>Built on top of <a href="https://d3js.org/">d3.js</a>.</p>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing</h2>
+
+<ol>
+<li>Include <a href="https://d3js.org/">d3.js</a> library</li>
+<li>Include arc-chart.js library</li>
+</ol>
+
+<h3>
+<a id="prerequisities" class="anchor" href="#prerequisities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisities</h3>
+
+<p>D3.js is required for this to work. Make sure you include it before arc-chart.js.</p>
+
+<pre><code>&lt;script src='d3.v3.min.js' type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src='arc-chart.js' type="text/javascript"&gt;&lt;/script&gt;
+
+</code></pre>
+
+<h3>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h3>
+
+<p>The library exposes a global object  <code>arcChart</code> which has the method : <code>createChart</code>. To plot a arc chart, you will need to use the code somewhat like below:</p>
+
+<pre><code>arcChart.create({
+  data: data, //see data section below for compatible data format
+  selector: "#chartContainer", //the selector for the container where the graph will be plotted
+  compact:true
+});
+</code></pre>
+
+<p>This will plot you a shiny graph with default values. See the full options below.</p>
+
+<h2>
+<a id="data-format" class="anchor" href="#data-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Format</h2>
+
+<p>The data should be an array of objects having the three properties:</p>
+
+<ol>
+<li>
+<strong>label</strong>: label to be displayed in legends</li>
+<li>
+<strong>value</strong>: value of the label </li>
+<li>
+<strong>fill</strong>: color of the ring/arc that you would like to have for this object/datum</li>
+</ol>
+
+<p>Here is how a sample data would look like:</p>
+
+<pre><code>var data = [
+  {
+    'label':'Calculate',
+    'value': 100,
+    'fill':'steelBlue'
+  },
+  {
+    'label':'Format',
+    'value': 90,
+    'fill':'red'
+  }
+]
+</code></pre>
+
+<h2>
+<a id="quick-note-about-graph-dimensions" class="anchor" href="#quick-note-about-graph-dimensions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick note about graph dimensions</h2>
+
+<p>The graph drawn will span over the width of the container. If you want the graph to be of specific size, set dimensions of the container and the graph will expand within that container :P</p>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
+
+<ul>
+<li>
+<strong>arcThickness</strong>: Number. Thickness of each arc (defaults to 15)</li>
+<li>
+<strong>arcDistance</strong>: Number. Distance between two arcs (defaults to 5)</li>
+<li>
+<strong>compact</strong>: Boolean. Switch to full circle mode/semi circle mode (defaults to false)</li>
+<li>
+<strong>selector</strong>: String. Selector string for DOM element - this is where the graph is going to be drawn into</li>
+<li>
+<strong>data</strong>: Array. See the data section above</li>
+</ul>
+
+<h2>
+<a id="built-with" class="anchor" href="#built-with" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Built With</h2>
+
+<ul>
+<li>
+<a href="https://d3js.org/">d3.js</a> </li>
+<li><a href="http://atom.io/">Atom</a></li>
+</ul>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Just send a pull request :P</p>
+
+<h2>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors</h2>
+
+<p><strong>Mrinal Purohit</strong></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/bmrinal/arc-graph">Arc-graph</a> is maintained by <a href="https://github.com/bmrinal">bmrinal</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
