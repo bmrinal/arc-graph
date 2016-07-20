@@ -5,6 +5,5 @@ description:
 authors:
   - Mrinal Purohit
 resources:
-  -  https://d3js.org/d3.v4.js
+  - https://d3js.org/d3.v4.js
   - ./arc-graph.js
-  - ./d3.v3.min.js
