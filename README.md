@@ -3,6 +3,10 @@
 
 Built on top of [d3.js](https://d3js.org/).
 
+## Demo
+See this [plunkr](https://embed.plnkr.co/6lL7iN8HRcXO1I1NYsuN/)
+
+
 
 ## Installing
 1. Include [d3.js](https://d3js.org/) library
