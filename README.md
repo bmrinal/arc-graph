@@ -69,7 +69,24 @@ The graph drawn will span over the width of the container. If you want the graph
 - **compact**: Boolean. Switch to full circle mode/semi circle mode (defaults to false)
 - **selector**: String. Selector string for DOM element - this is where the graph is going to be drawn into
 - **data**: Array. See the data section above
+- **plotQuadrant** Object. Defines the start and end quadrants numbered as shown in the below diagram. Can have only two keys : 'start' and 'end' have possible values as 1,2,3 and 4 respectively. e.g:
 
+ ```arcChart.create({
+  data: data,
+  selector: "#chartContainer",
+  compact:true,
+  plotQuadrant:{
+    start:1,
+    end: 3
+  },
+});
+
+```       
+<p align="center">
+  <img src="http://mrinalpurohit.com/demos/arc-graph/demo_quadrant.png" width="350"/>
+ 
+</p>
+![Numbering order of quadrants](http://mrinalpurohit.com/demos/arc-graph/demo_quadrant.png)
 ## Built With
 
 * [d3.js](https://d3js.org/) 
