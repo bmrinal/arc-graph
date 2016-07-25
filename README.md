@@ -4,7 +4,7 @@
 Built on top of [d3.js](https://d3js.org/).
 
 ## Demo
-See this [plunkr](https://embed.plnkr.co/6lL7iN8HRcXO1I1NYsuN/)
+See this [demo](http://mrinalpurohit.com/demos/arc-graph/)
 
 
 
