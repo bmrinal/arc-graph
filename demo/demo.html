@@ -12,44 +12,65 @@
     float: right;
     width:20%
   }
-
   #form-container{
     margin-top:40px
   }
 }
 </style>
+
+<!-- Latest compiled and minified CSS (only for demo) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+<!-- Optional theme (only for demo) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
 </head>
+
 <body>
-  <div id="chartContainer" style='width:600px'></div>
-  <div id="form-container">
-    <form>
-      <div class="form-field">
-        <label for="arcsDistance">Arc Distance  (default: 5)<label>
-        <input id='arcDistance' type='number'>
+  <div class="container" style="margin-top:10%">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="chartContainer" style='width:400px'></div>
       </div>
-      <div class="form-field">
-      <label for="arcDistance">Arc Thickness (default: 15)<label>
-      <input id='arcThickness' type='number'>
-    </div>
-        <div class="form-field">
-            <label for="compactMode">Compact Mode<label>
-            <select id="compactMode">
+
+      <div class="col-md-4">
+        <form class="form">
+          <div class="form-group">
+            <label for="arcDistance">Arc Distance  (default: 5)</label>
+            <input type="number" class="form-control" id="arcDistance" placeholder="Enter distance between the two arcs">
+          </div>
+          <div class="form-group">
+            <label for="arcThickness">Arc Thickness (default: 15)</label>
+            <input type="number" class="form-control" id="arcThickness" placeholder="Enter thickness of each ring">
+          </div>
+
+          <div class="form-group">
+            <label for="startQuad">Start Quadrant</label>
+            <input type="number" class="form-control" id="startQuad" placeholder="Enter quadrant number (1,2,3,4)">
+          </div>
+
+          <div class="form-group">
+            <label for="startQuad">End Quadrant</label>
+            <input type="number" class="form-control" id="endQuad" placeholder="Enter quadrant number (1,2,3,4)">
+          </div>
+
+          <div class="form-group">
+            <label for="compactMode">Compact Mode (Ignored if quadrants are set)</label>
+            <select class="form-control" id="compactMode">
                 <option value=true>True</option>
                 <option value=false>False</option>
             </select>
-        <div>
-          <div class="form-field">
-          <input type="button" id='update-button' value="Update"/>
+          </div>
+          <div class="form-group" style="padding-top:30px">
+              <button type="button" id='update-button' class="btn btn-default">Update graph</button>
         </div>
-    </form>
-
+        </form>
+      </div>
+    </div>
   </div>
+
+
 <script src='d3.v3.min.js' type="text/javascript"></script>
 <script src='arc-chart.js' type="text/javascript"></script>
-
-
 <script type="text/javascript">
-
 var data = [
   {
     'label':'Calculate',
@@ -86,7 +107,11 @@ var data = [
 arcChart.create({
   data: data,
   selector: "#chartContainer",
-  compact:true
+  compact:true,
+  plotQuadrant:{
+    start:1,
+    end: 3
+  },
 });
 
 
@@ -97,16 +122,33 @@ btn.addEventListener('click',function(){
       arcThickness = document.getElementById('arcThickness').value;
       arcDistance = document.getElementById('arcDistance').value;
       compact = document.getElementById('compactMode').value;
-      arcChart.create({
-        data:data,
-        selector: "#chartContainer",
-        arcThickness: arcThickness,
-        arcDistance: arcDistance,
-        compact:compact
-      })
+      startQuad = document.getElementById('startQuad').value;
+      endQuad = document.getElementById('endQuad').value;
 
+      if(startQuad && endQuad)
+        {
+          arcChart.create({
+                 data:data,
+                 selector: "#chartContainer",
+                 arcThickness: arcThickness,
+                 arcDistance: arcDistance,
+                 compact:compact,
+                 plotQuadrant: {
+                   start:startQuad,
+                   end: endQuad
+                 }
+               })
+        }
+        else {
+          arcChart.create({
+                 data:data,
+                 selector: "#chartContainer",
+                 arcThickness: arcThickness,
+                 arcDistance: arcDistance,
+                 compact:compact
+               })
+        }
 })
 </script>
-
 </body>
 </html>
