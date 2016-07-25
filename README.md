@@ -80,13 +80,12 @@ The graph drawn will span over the width of the container. If you want the graph
     end: 3
   },
 });
+```
 
-```       
 <p align="center">
   <img src="http://mrinalpurohit.com/demos/arc-graph/demo_quadrant.png" width="350"/>
- 
 </p>
-![Numbering order of quadrants](http://mrinalpurohit.com/demos/arc-graph/demo_quadrant.png)
+
 ## Built With
 
 * [d3.js](https://d3js.org/) 
