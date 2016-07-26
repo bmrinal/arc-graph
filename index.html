@@ -27,7 +27,7 @@
 <h2>
 <a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
 
-<p>See this <a href="https://embed.plnkr.co/6lL7iN8HRcXO1I1NYsuN/">plunkr</a></p>
+<p>See this <a href="http://mrinalpurohit.com/demos/arc-graph/">demo</a></p>
 
 <h2>
 <a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing</h2>
@@ -110,7 +110,24 @@
 <strong>selector</strong>: String. Selector string for DOM element - this is where the graph is going to be drawn into</li>
 <li>
 <strong>data</strong>: Array. See the data section above</li>
+<li>
+<p><strong>plotQuadrant</strong> Object. Defines the start and end quadrants numbered as shown in the below diagram. Can have only two keys : 'start' and 'end' have possible values as 1,2,3 and 4 respectively. e.g:</p>
+
+<pre lang="arcChart.create({"><code>data: data,
+selector: "#chartContainer",
+compact:true,
+plotQuadrant:{
+  start:1,
+  end: 3
+},
+});
+</code></pre>
+</li>
 </ul>
+
+<p align="center">
+  <img src="http://mrinalpurohit.com/demos/arc-graph/demo_quadrant.png" width="350">
+</p>
 
 <h2>
 <a id="built-with" class="anchor" href="#built-with" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Built With</h2>
