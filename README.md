@@ -9,8 +9,10 @@ See this [demo](http://mrinalpurohit.com/demos/arc-graph/)
 
 
 ## Installing
+### Using the library directly for simple web pages
 1. Include [d3.js](https://d3js.org/) library
 2. Include arc-chart.js library
+
 
 ### Prerequisities
 
@@ -20,6 +22,13 @@ D3.js is required for this to work. Make sure you include it before arc-chart.js
 <script src='d3.v3.min.js' type="text/javascript"></script>
 <script src='arc-chart.js' type="text/javascript"></script>
 
+```
+
+
+### Installing using npm
+Use the below command:
+```
+npm install arc-graph 
 ```
 
 ### How to use
