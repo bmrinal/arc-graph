@@ -1,0 +1,26 @@
+{
+  "name": "arc-graph",
+  "version": "1.0.0",
+  "description": "Quick library to plot the arc/ring like graphs with lots of options!",
+  "main": "lib/arc-chart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmrinal/arc-graph.git"
+  },
+  "keywords": [
+    "arc-graph",
+    "ring-graph",
+    "concentric",
+    "circle",
+    "graph"
+  ],
+  "author": "Mrinal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmrinal/arc-graph/issues"
+  },
+  "homepage": "https://github.com/bmrinal/arc-graph#readme"
+}
